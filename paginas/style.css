@@ -50,6 +50,29 @@ footer p {
   font-size: 0.9rem;
 }
 
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+  flex: 1 1 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer p {
+    flex: 1 1 auto;
+    text-align: left;
+  }
+}
+
 /* Botones    */
 .btn-warning {
   background-color: #ffde59;
@@ -95,4 +118,106 @@ img {
   border-radius: 10px;
 }
 
+/* Contenedor general de la presentación */
+.presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* 🔹 para que en mobile se apile */
+  padding: 40px 10%;
+  gap: 30px;
+}
 
+/* --- PRESENTACIÓN INICIO --- */
+.presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 5%;
+  background-color: #ffffff;
+}
+
+.presentacion-texto {
+  flex: 1 1 400px;
+  max-width: 550px;
+}
+
+.presentacion-texto h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.main .p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.presentacion-texto a {
+  display: inline-block;
+  background-color: #ffde59;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.presentacion-texto a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Imagen */
+.presentacion-imagen {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.presentacion-imagen img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .presentacion {
+    flex-direction: column-reverse; /* imagen abajo */
+    text-align: center;
+    padding: 25px 20px;
+  }
+
+  .presentacion-texto h1 {
+    font-size: 1.8rem;
+  }
+
+  .presentacion-texto p {
+    font-size: 0.95rem;
+  }
+
+  .presentacion-imagen img {
+    max-width: 250px;
+  }
+}
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
